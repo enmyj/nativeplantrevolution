@@ -55,6 +55,26 @@ public/
 4. Add photos to `public/images/sites/your-site-name/`
 5. Commit and push—Cloudflare Pages will auto-deploy
 
-## Deployment
+## Deployment (Cloudflare Pages)
 
-Deployed on Cloudflare Pages. Push to `main` to deploy.
+### Initial Setup
+
+1. Push this repo to GitHub
+2. Go to [Cloudflare Pages](https://dash.cloudflare.com/?to=/:account/pages)
+3. Click **Create a project** → **Connect to Git**
+4. Select your repository
+5. Configure build settings:
+   - **Framework preset:** Astro
+   - **Build command:** `npx astro build`
+   - **Build output directory:** `dist`
+6. Click **Save and Deploy**
+
+### Ongoing Deploys
+
+Push to `main` and Cloudflare auto-deploys within ~1 minute.
+
+### Custom Domain
+
+1. In Cloudflare Pages project → **Custom domains**
+2. Add `nativeplantrevolution.info`
+3. Follow DNS instructions (if domain is on Cloudflare, it's automatic)

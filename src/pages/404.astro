@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Page Not Found">
+  <div class="not-found">
+    <h1>404</h1>
+    <p>Oops! This page doesn't exist.</p>
+    <a href="/">← Back to Gardens</a>
+  </div>
+</Layout>
+
+<style>
+  .not-found {
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+
+  h1 {
+    font-size: 6rem;
+    color: #228B22;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: #666;
+    margin: 1rem 0 2rem;
+  }
+
+  a {
+    color: #228B22;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
