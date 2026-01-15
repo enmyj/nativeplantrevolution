@@ -1,0 +1,98 @@
+---
+interface Props {
+  variant?: 'green' | 'white';
+}
+
+const { variant = 'white' } = Astro.props;
+---
+
+<header class:list={['header', variant]}>
+  <nav class="nav">
+    <a href="/" class="logo">Native Plant Revolution</a>
+    <ul class="nav-links">
+      <li><a href="/">Gardens</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .header {
+    padding: 1rem 2rem;
+  }
+
+  .header.green {
+    background-color: #228B22;
+  }
+
+  .header.white {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .header.green .logo {
+    color: #fff;
+  }
+
+  .header.white .logo {
+    color: #228B22;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .header.green .nav-links a {
+    color: #fff;
+  }
+
+  .header.green .nav-links a:hover {
+    color: #c0e0c0;
+  }
+
+  .header.white .nav-links a {
+    color: #333;
+  }
+
+  .header.white .nav-links a:hover {
+    color: #228B22;
+  }
+
+  @media (max-width: 600px) {
+    .header {
+      padding: 1rem;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+    }
+
+    .nav-links {
+      gap: 1rem;
+    }
+  }
+</style>
