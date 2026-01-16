@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro';
 	<article>
 		<h1>About Native Plant Revolution</h1>
 
-		<p>
+		<p class="lead">
 			Native Plant Revolution is a community-driven initiative dedicated to transforming 
 			landscapes across neighborhoods by replacing conventional lawns and ornamental gardens 
 			with beautiful, ecologically rich native plant gardens.
@@ -45,8 +45,8 @@ import Layout from '../layouts/Layout.astro';
 			<p>
 				Have questions or want to submit your garden? We'd love to hear from you!
 			</p>
-			<p>
-				Email us at: <a href="mailto:hello@nativeplantrevolution.info">hello@nativeplantrevolution.info</a>
+			<p class="email">
+				📧 <a href="mailto:hello@nativeplantrevolution.info">hello@nativeplantrevolution.info</a>
 			</p>
 		</section>
 	</article>
@@ -57,18 +57,17 @@ import Layout from '../layouts/Layout.astro';
 		max-width: 700px;
 	}
 
-	h1 {
-		color: #228B22;
-		margin-bottom: 1.5rem;
+	.lead {
+		font-size: 1.15rem;
+		color: var(--color-text-muted);
+		margin-bottom: 2rem;
+	}
+
+	section {
+		margin-top: 2.5rem;
 	}
 
 	h2 {
-		color: #228B22;
-		margin-top: 2.5rem;
-		margin-bottom: 1rem;
-	}
-
-	p {
 		margin-bottom: 1rem;
 	}
 
@@ -78,14 +77,15 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	li {
-		margin-bottom: 0.5rem;
+		margin-bottom: 0.75rem;
+		color: var(--color-text);
 	}
 
-	a {
-		color: #228B22;
+	li::marker {
+		color: var(--color-accent);
 	}
 
-	a:hover {
-		text-decoration: none;
+	.email {
+		font-size: 1.1rem;
 	}
 </style>

@@ -1,0 +1,67 @@
+---
+// Minimal JS for theme toggle - stores preference in localStorage
+---
+
+<button class="theme-toggle" aria-label="Toggle theme">
+  <span class="icon sun">☀️</span>
+  <span class="icon moon">🌙</span>
+</button>
+
+<style>
+  .theme-toggle {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: background-color 0.2s;
+  }
+
+  .theme-toggle:hover {
+    background: var(--color-surface);
+  }
+
+  .icon {
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+
+  /* Light mode: show moon (to switch to dark) */
+  :global([data-theme="light"]) .sun {
+    display: none;
+  }
+  :global([data-theme="light"]) .moon {
+    display: inline;
+  }
+
+  /* Dark mode: show sun (to switch to light) */
+  :global([data-theme="dark"]) .sun {
+    display: inline;
+  }
+  :global([data-theme="dark"]) .moon {
+    display: none;
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector('.theme-toggle');
+  const html = document.documentElement;
+
+  // Get initial theme
+  const stored = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initial = stored || (prefersDark ? 'dark' : 'light');
+  html.setAttribute('data-theme', initial);
+
+  toggle?.addEventListener('click', () => {
+    const current = html.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+</script>

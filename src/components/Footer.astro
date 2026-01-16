@@ -1,21 +1,38 @@
 ---
+const year = new Date().getFullYear();
 ---
 
-<footer class="footer">
-  <p>&copy; 2026 Native Plant Revolution</p>
+<footer>
+  <div class="footer-content">
+    <p class="copyright">© {year} Native Plant Revolution</p>
+    <p class="tagline">Restoring native habitats, one garden at a time.</p>
+  </div>
 </footer>
 
 <style>
-  .footer {
-    padding: 2rem;
-    text-align: center;
-    background-color: #f5f5f5;
-    border-top: 1px solid #e0e0e0;
-    color: #666;
-    font-size: 0.9rem;
+  footer {
+    border-top: 1px solid var(--color-border);
+    background: var(--color-surface);
+    margin-top: 4rem;
   }
 
-  .footer p {
+  .footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .copyright {
     margin: 0;
+    font-weight: 500;
+    color: var(--color-heading);
+  }
+
+  .tagline {
+    margin: 0.5rem 0 0;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    font-style: italic;
   }
 </style>

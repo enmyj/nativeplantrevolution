@@ -1,94 +1,99 @@
 ---
-interface Props {
-  variant?: 'green' | 'white';
-}
-
-const { variant = 'white' } = Astro.props;
+import ThemeToggle from './ThemeToggle.astro';
 ---
 
-<header class:list={['header', variant]}>
-  <nav class="nav">
-    <a href="/" class="logo">Native Plant Revolution</a>
-    <ul class="nav-links">
-      <li><a href="/">Gardens</a></li>
-      <li><a href="/about">About</a></li>
-    </ul>
+<header>
+  <nav>
+    <a href="/" class="logo">
+      <span class="logo-icon">🌿</span>
+      <span class="logo-text">Native Plant Revolution</span>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="/">Gardens</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+      <ThemeToggle />
+    </div>
   </nav>
 </header>
 
 <style>
-  .header {
-    padding: 1rem 2rem;
+  header {
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-surface);
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
 
-  .header.green {
-    background-color: #228B22;
-  }
-
-  .header.white {
-    background-color: #fff;
-    border-bottom: 1px solid #e0e0e0;
-  }
-
-  .nav {
-    max-width: 1200px;
+  nav {
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
   }
 
   .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-heading);
     text-decoration: none;
   }
 
-  .header.green .logo {
-    color: #fff;
+  .logo:hover {
+    color: var(--color-accent);
   }
 
-  .header.white .logo {
-    color: #228B22;
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
   }
 
   .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
   .nav-links a {
-    text-decoration: none;
+    color: var(--color-text);
     font-weight: 500;
-    transition: color 0.2s;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
   }
 
-  .header.green .nav-links a {
-    color: #fff;
-  }
-
-  .header.green .nav-links a:hover {
-    color: #c0e0c0;
-  }
-
-  .header.white .nav-links a {
-    color: #333;
-  }
-
-  .header.white .nav-links a:hover {
-    color: #228B22;
+  .nav-links a:hover {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
   }
 
   @media (max-width: 600px) {
-    .header {
-      padding: 1rem;
+    .logo-text {
+      display: none;
     }
 
-    .logo {
-      font-size: 1.2rem;
+    .logo-icon {
+      font-size: 1.75rem;
+    }
+
+    nav {
+      padding: 0.75rem 1rem;
     }
 
     .nav-links {

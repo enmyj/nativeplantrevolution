@@ -49,19 +49,8 @@ const formattedDate = plantedDate
 <style>
 	.back {
 		display: inline-block;
-		color: #228B22;
-		text-decoration: none;
 		margin-bottom: 1.5rem;
-	}
-
-	.back:hover {
-		text-decoration: underline;
-	}
-
-	h1 {
-		color: #228B22;
-		margin-bottom: 0.5rem;
-		font-size: 2.5rem;
+		font-weight: 500;
 	}
 
 	.meta {
@@ -69,7 +58,7 @@ const formattedDate = plantedDate
 		flex-wrap: wrap;
 		gap: 1.5rem;
 		margin-bottom: 2rem;
-		color: #555;
+		color: var(--color-text-muted);
 	}
 
 	.meta p {
@@ -80,7 +69,7 @@ const formattedDate = plantedDate
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 		gap: 1rem;
-		margin-bottom: 2rem;
+		margin-bottom: 2.5rem;
 	}
 
 	.gallery img {
@@ -88,6 +77,7 @@ const formattedDate = plantedDate
 		height: 250px;
 		object-fit: cover;
 		border-radius: 12px;
+		border: 1px solid var(--color-border);
 	}
 
 	.content {
@@ -95,8 +85,19 @@ const formattedDate = plantedDate
 		line-height: 1.8;
 	}
 
-	.content :global(h2),
-	.content :global(h3) {
-		color: #228B22;
+	.content :global(ul) {
+		padding-left: 1.5rem;
+	}
+
+	.content :global(li) {
+		margin-bottom: 0.5rem;
+	}
+
+	.content :global(li::marker) {
+		color: var(--color-accent);
+	}
+
+	.content :global(strong) {
+		color: var(--color-heading);
 	}
 </style>
