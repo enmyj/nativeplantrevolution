@@ -8,7 +8,7 @@ plantedDate: 2024-12-29
 featured: true
 ---
 
-This garden was established in late 2024 in the front of the Willows Nursery school. The planting area used to have a tree, but after the tree died, the area was left unattended. Cars started to drive over it, compacting the soil, and leading to flooding of the parking lot. demonstration garden and vital habitat corridor for urban pollinators.
+This garden was established in late 2024 in the front of the Willows Nursery school. The planting area used to have a tree, but after the tree died, the area was left unattended. Cars started to drive over it, compacting the soil, and leading to flooding of the parking lot.
 
 ## Plants Featured (13 species)
 
