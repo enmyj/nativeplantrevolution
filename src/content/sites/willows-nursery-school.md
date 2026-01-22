@@ -3,7 +3,7 @@ title: "The Willows Nursery School Pollinator Garden"
 address: "1149 Minnesota Ave, San Jose 95125"
 description: "A vibrant pollinator habitat featuring California native plants such as wildflowers and grasses."
 images:
-  - /images/sites/riverside-pollinator-garden/main.png
+  - /images/poppy.jpeg
 plantedDate: 2024-12-29
 featured: true
 ---
