@@ -14,8 +14,8 @@ const sortedSites = sites.sort((a, b) => {
 <Layout title="Gardens">
 	<h1>Native Plant Gardens</h1>
 	<p class="intro">
-		Explore our growing collection of native plant gardens. Each site showcases the beauty 
-		and ecological benefits of plants native to their region, creating vibrant habitats 
+		Explore our growing collection of native plant gardens. Each site showcases the beauty
+		and ecological benefits of plants native to their region, creating vibrant habitats
 		for pollinators, birds, and other wildlife.
 	</p>
 
@@ -26,8 +26,8 @@ const sortedSites = sites.sort((a, b) => {
 					title={site.data.title}
 					address={site.data.address}
 					description={site.data.description}
-					image={site.data.images[0]}
-					slug={site.id.replace(/\.md$/, '')}
+					image={site.data.thumbnail}
+					slug={site.id.split('/')[0]}
 				/>
 			))}
 		</div>

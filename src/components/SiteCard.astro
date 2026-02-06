@@ -1,9 +1,12 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
 interface Props {
   title: string;
   address: string;
   description: string;
-  image: string;
+  image: ImageMetadata;
   slug: string;
 }
 
@@ -12,7 +15,7 @@ const { title, address, description, image, slug } = Astro.props;
 
 <a href={`/sites/${slug}`} class="site-card">
   <div class="image-container">
-    <img src={image} alt={title} loading="lazy" />
+    <Image src={image} alt={title} width={640} height={400} loading="lazy" />
   </div>
   <div class="content">
     <h2>{title}</h2>

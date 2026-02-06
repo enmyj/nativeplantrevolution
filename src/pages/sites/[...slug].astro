@@ -1,17 +1,19 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Lightbox from '../../components/Lightbox.astro';
+import { Image } from 'astro:assets';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
 	const sites = await getCollection('sites');
 	return sites.map((site) => ({
-		params: { slug: site.id.replace(/\.md$/, '') },
+		params: { slug: site.id.split('/')[0] },
 		props: { site },
 	}));
 }
 
 const { site } = Astro.props;
-const { title, address, plantedDate, images } = site.data;
+const { title, address, plantedDate, gallery } = site.data;
 const { Content } = await render(site);
 
 const formattedDate = plantedDate
@@ -33,10 +35,10 @@ const formattedDate = plantedDate
 		{formattedDate && <p class="date">🌱 Planted: {formattedDate}</p>}
 	</div>
 
-	{images && images.length > 0 && (
+	{gallery && gallery.length > 0 && (
 		<div class="gallery">
-			{images.map((image: string) => (
-				<img src={image} alt={title} />
+			{gallery.map((image) => (
+				<Image src={image} alt={title} width={600} height={400} />
 			))}
 		</div>
 	)}
@@ -44,6 +46,8 @@ const formattedDate = plantedDate
 	<article class="content">
 		<Content />
 	</article>
+
+	<Lightbox />
 </Layout>
 
 <style>

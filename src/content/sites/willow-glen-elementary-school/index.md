@@ -2,15 +2,17 @@
 title: "Willow Glen Elementary School Native Plant Garden"
 address: "1425 Lincoln Ave, San Jose, CA 95125"
 description: "A vibrant pollinator habitat featuring California native plants."
-images:
-  - /images/poppy.jpeg
+thumbnail: ./willow-glen-elementary.jpg
+gallery:
+  - ./willow-glen-elementary.jpg
+  - ./poppy.jpeg
 plantedDate: 2026-01-02
 featured: true
 ---
 
 This garden was established in winter 2025/2026 in the parking lot of Willow Glen Elementary School. The planting area used to have a willow tree, but after the tree died, the area was left unattended. We planted a Coast Live Oak tree along with 9 other native plant friends.
 
-## Plants Featured ( species)
+## Plants Featured (species)
 
 ### Wildflowers
 - **California Fuschia** (*Epilobium canum*) - Late season nectar source, tube-shaped flowers are a favorite of hummingbirds
