@@ -25,7 +25,7 @@ This garden was established in late 2024 in the front of the Willows Nursery sch
 - **Yarrow** (*Achillea millefolium*) -
 - **California Sagebrush** (*Artemisia californica*) - 
 
-### Grasses & Sedges
+### Grasses
 - **Purple Needle Grass** (*Stipa pulchra*) - Native bunch grass with deep roots that aerate soil and store carbon
 - **Common Rush** (*Juncus patens*) - Thrives in the moist soil, filters pollutants from the soil
 
