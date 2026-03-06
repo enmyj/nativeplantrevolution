@@ -4,8 +4,16 @@ address: "1149 Minnesota Ave, San Jose 95125"
 description: "A vibrant pollinator habitat featuring California native plants such as wildflowers and grasses."
 thumbnail: ./willows-nursery.jpg
 gallery:
+  - ./PXL_20250516_004646373.jpg
+  - ./PXL_20260302_005613365.jpg
+  - ./PXL_20260302_005747174.jpg
+  - ./PXL_20241126_001025358.jpg
+  - ./PXL_20250607_014743040.jpg
+  - ./PXL_20260302_005628592.jpg
   - ./willows-nursery.jpg
-  - ./poppy.jpeg
+  - ./PXL_20250107_003944812.jpg
+  - ./PXL_20260302_005559836.jpg
+  - ./PXL_20260302_005744999.jpg
 plantedDate: 2024-12-29
 featured: true
 ---
